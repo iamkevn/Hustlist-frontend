@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient: linear-gradient(90deg, #64b3f4, #c2e59c);
+  --clr-primary: rgb(54, 112, 199);
+  --clr-light: #f4f4f4;
+}
+
+.bangers {
+  font-family: 'Bangers', cursive;
+  background: linear-gradient(90deg, #64b3f4, #c2e59c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #ddd;
+  background-size: 300%;
+  background-image: var(--gradient);
+  animation: bg-animation 25s infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+header {
+  font-size: 2rem;
+  background: white;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 8px;
+  opacity: 0.9;
+}
+
+h1 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+}
+
+.create {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
+}
+
+.create:hover {
+  opacity: 0.7;
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font-size: inherit;
+  outline: none;
+  padding: 0.25em;
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+}
+
+.new::placeholder {
+  opacity: 0.4;
+}
+
+.new:focus {
+  border-bottom-width: 3px;
+}
+
+.new:focus::placeholder {
+  opacity: 0.15;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.todo-list {
+  --spacer: 2rem;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  width: 32vw;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.todo-header {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  font-family: 'Bangers', cursive;
+  background: linear-gradient(180deg, #64b3f4, #c2e59c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.list-title {
+  margin: 0 1em 0 0;
+  width: 100%;
+  font-size: 35px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.todo-body {
+  padding: 30px;
+  padding-top: 10px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.new-task-creator .create {
+  color: var(--clr-primary);
+}
+
+.task label {
+  display: flex-inline;
+  align-items: center;
+  position: relative;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.task::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -0.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.task label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 1.5em;
+  top: 50%;
+  height: 3px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+#button {
+  background: transparent;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+i {
+  cursor: pointer;
+}
+
+.check {
+  color: #c2e59c;
+  background: transparent;
+  padding: 3px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit {
+  color: #64b3f4;
+  background: transparent;
+  padding: 3px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trash {
+  color: #5e5e5e;
+  background: transparent;
+  padding: 3px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fa-trash,
+.fa-pencil {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.opacity {
+  opacity: 0.5;
+}
+
+/* STOP HERE */
+
+/* form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input {
+  border-radius: 10px;
+}
+#button {
+  background: transparent;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.task {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.task li {
+  flex: 1;
+}
+
+.destroy-btn,
+.complete-btn {
+  background: #64b3f4;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #1dc525;
+}
+
+.task-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-pencil {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+} */
+
+/* IGNORE ABOVE CODE */
+
+/* ANIMATIONS!!! */
+
+/* .box-area {
+  postion: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-delay: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+} */

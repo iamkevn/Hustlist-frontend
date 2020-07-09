@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <title>Hustlist</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="bangers">Hustlist</h1>
+    </header>
+
+    <!-- <h3 class="animate__animated animate__zoomIn">Hustle Harder!</h3> -->
+
+    <div class="todo-list">
+      <div class="todo-header">
+        <h2 class="list-title">
+          Hustle Harder!
+        </h2>
+      </div>
+
+      <div class="todo-body">
+        <div class="tasks">
+          <div class="task">
+            <div>
+              <label for="task-1">
+                Hustle 1
+              </label>
+            </div>
+            <div>
+              <button class="check">
+                <i class="fas fa-check"></i>
+              </button>
+              <button class="edit">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="trash">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="task">
+            <div>
+              <label for="task-2">
+                Hustle 2
+              </label>
+            </div>
+            <div>
+              <button class="check">
+                <i class="fas fa-check"></i>
+              </button>
+              <button class="edit">
+                <i class="fas fa-pencil-alt"></i>
+              </button>
+              <button class="trash">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="new-task-creator">
+          <form>
+            <input
+              type="text"
+              class="new task"
+              name="task"
+              placeholder="add new hustle"
+            />
+            <input type="submit" class="create" value="+" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div>
+      <form>
+        <input type="text" id="input" />
+        <button id="button" type="submit">
+          <i class="fas fa-plus-circle"></i>
+        </button>
+      </form>
+
+      <div class="container">
+        <ul id="list"></ul>
+      </div>
+    </div> -->
+
+    <div>
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>
