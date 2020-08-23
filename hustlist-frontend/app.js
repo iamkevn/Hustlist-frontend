@@ -6,10 +6,10 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     //user input
     const newTask = { task: e.target.task.value }
-
+    form.reset();
     // post request
     fetch('http://localhost:3000/todos', {
-        method: 'POST', // or 'PUT'
+        method: 'POST', 
         headers: {
             'Content-Type': 'application/json',
         },
@@ -18,8 +18,11 @@ form.addEventListener('submit', e => {
         .then(r => r.json())
         .then(renderOneTask)
 
-    //add to list
 })
+const filterOption = document.querySelector('.filter-todo')
+function filterTodo (e) {
+  console.log(label)
+}
 
 function renderAllTasks (tasks) {
     tasks.forEach(renderOneTask)
@@ -40,8 +43,8 @@ function renderOneTask(task) {
               <button class="check">
                 <i class="fas fa-check"></i>
               </button>
-              <button class="edit">
-                <i class="fas fa-pencil-alt"></i>
+              <button class="star">
+              <i class="far fa-star"></i>
               </button>
               <button class="trash">
                 <i class="fas fa-trash"></i>
@@ -49,7 +52,7 @@ function renderOneTask(task) {
             </div>
     `
     const trash = todo.querySelector('.trash')
-    const edit = todo.querySelector('.edit')
+    const star = todo.querySelector('.star')
     const check = todo.querySelector('.check')
     const label = todo.querySelector('label')
 
@@ -57,19 +60,39 @@ function renderOneTask(task) {
       label.classList.toggle('completed');
       todo.classList.toggle('opacity');
 
-    //   fetch(`http://localhost:3000/todos/${task.id}`, {
-    //     method: 'PATCH',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(check),
-    // })
-    //     .then(r => r.json())
-    //     .then(json => console.log(json))
+      fetch(`http://localhost:3000/todos/${task.id}`, {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(check),
+    })
+        .then(r => r.json())
+        .then(json => console.log(json))
   })
 
-    edit.addEventListener('click', e => {
-      console.log(e.target.value)
+
+   const i = todo.querySelector('i')
+
+    star.addEventListener('click', e => {
+      if(task.important === true) {
+        task.important = false;
+        star.innerHTML = '<i class="far fa-star"></i>';
+      }
+      else if(task.important === false){
+        task.important = true;
+        star.innerHTML = '<i class="fas fa-star"></i>';
+      } else {
+        task.important = true;
+        star.innerHTML = '<i class="fas fa-star"></i>';
+      }
+      fetch(`http://localhost:3000/todos/${task.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ important: true })
+    }) 
     })
 
     trash.addEventListener('click', () => {
@@ -79,14 +102,7 @@ function renderOneTask(task) {
         }) 
     })
 
-    // todo.addEventListener("click", buttonTodo);
-    // function buttonTodo(e) {
-    //     const button = e.target;
-    //     if(button.classList[0] === '.edit'){
-    //       console.log(e.target)
-    //         // todo.classList.toggle('completed');
-    //     } 
-    // }
+    
         
     
 

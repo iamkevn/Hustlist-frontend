@@ -37,43 +37,7 @@
 
       <div class="todo-body">
         <div class="tasks">
-          <div class="task">
-            <div>
-              <label for="task-1">
-                Hustle 1
-              </label>
-            </div>
-            <div>
-              <button class="check">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="edit">
-                <i class="fas fa-pencil-alt"></i>
-              </button>
-              <button class="trash">
-                <i class="fas fa-trash"></i>
-              </button>
-            </div>
-          </div>
-
-          <div class="task">
-            <div>
-              <label for="task-2">
-                Hustle 2
-              </label>
-            </div>
-            <div>
-              <button class="check">
-                <i class="fas fa-check"></i>
-              </button>
-              <button class="edit">
-                <i class="fas fa-pencil-alt"></i>
-              </button>
-              <button class="trash">
-                <i class="fas fa-trash"></i>
-              </button>
-            </div>
-          </div>
+          <div class="task"></div>
         </div>
 
         <div class="new-task-creator">
@@ -82,12 +46,20 @@
               type="text"
               class="new task"
               name="task"
-              placeholder="add new hustle"
+              placeholder="add a new hustle"
             />
             <input type="submit" class="create" value="+" />
           </form>
         </div>
       </div>
+    </div>
+    <div class="select">
+      <select name="todos" class="filter-todo">
+        <option value="all">All</option>
+        <option value="complete">Complete</option>
+        <option value="incomplete">Incomplete</option>
+        <option value="important">Important</option>
+      </select>
     </div>
 
     <!-- <div>

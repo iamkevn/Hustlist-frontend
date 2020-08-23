@@ -193,10 +193,16 @@ form {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  outline: non;
 }
 
 i {
   cursor: pointer;
+}
+
+button,
+input {
+  outline: none;
 }
 
 .check {
@@ -209,8 +215,8 @@ i {
   transition: all 0.3s ease;
 }
 
-.edit {
-  color: #64b3f4;
+.star {
+  color: #f9fd01;
   background: transparent;
   padding: 3px;
   font-size: 1.2rem;
@@ -220,7 +226,7 @@ i {
 }
 
 .trash {
-  color: #5e5e5e;
+  color: #64b3f4;
   background: transparent;
   padding: 3px;
   font-size: 1.2rem;
@@ -242,101 +248,43 @@ i {
   opacity: 0.5;
 }
 
-/* STOP HERE */
+/* select bar */
 
-/* form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#input {
-  border-radius: 10px;
-}
-#button {
-  background: transparent;
-}
-
-form input,
-form button {
-  padding: 0.5rem;
-  font-size: 2rem;
+select {
+  appearance: none;
+  outline: none;
   border: none;
-  background: white;
-}
-
-form button {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  color: white;
-  background: white;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#list {
-  min-width: 30%;
-  list-style: none;
-}
-
-.task {
-  margin: 0.5rem;
-  background: white;
-  color: black;
-  font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  transition: all 0.5s ease;
+  margin: 10px auto;
+  border-radius: 10px;
+  width: 160px;
 }
 
-.task li {
-  flex: 1;
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  margin: 10px auto;
+  border-radius: 10px;
 }
 
-.destroy-btn,
-.complete-btn {
-  background: #64b3f4;
-  color: white;
-  border: none;
-  padding: 1rem;
+select {
+  background-color: #f4f4f4;
   cursor: pointer;
-  font-size: 1rem;
+  padding: 3px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--clr-primary);
+  font-size: 20px;
+  padding-right: 8px;
 }
 
-.complete-btn {
-  background: #1dc525;
-}
 
-.task-item {
-  padding: 0rem 0.5rem;
-}
 
-.fa-trash,
-.fa-pencil {
-  pointer-events: none;
-}
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-}
 
-.fall {
-  transform: translateY(8rem) rotateZ(20deg);
-  opacity: 0;
-} */
-
-/* IGNORE ABOVE CODE */
-
-/* ANIMATIONS!!! */
-
-/* .box-area {
+.box-area {
   postion: absolute;
   top: 0;
   left: 0;
