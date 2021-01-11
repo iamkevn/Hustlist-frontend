@@ -1,68 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-      integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="app.js"></script>
-    <title>Hustlist</title>
-  </head>
-  <body>
-    <header>
-      <h1 class="bangers">Hustlist</h1>
-    </header>
 
-    <!-- <h3 class="animate__animated animate__zoomIn">Hustle Harder!</h3> -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+  <title>Hustlist</title>
+</head>
 
-    <div class="todo-list">
-      <div class="todo-header">
-        <h2 class="list-title">
-          Hustle Harder!
-        </h2>
-      </div>
+<!-- cd into backend and type "rails server" -->
 
-      <div class="todo-body">
-        <div class="tasks">
-          <div class="task"></div>
-        </div>
+<body>
+  <header>
+    <h1 class="bangers">Hustlist</h1>
+  </header>
 
-        <div class="new-task-creator">
-          <form>
-            <input
-              type="text"
-              class="new task"
-              name="task"
-              placeholder="add a new hustle"
-            />
-            <input type="submit" class="create" value="+" />
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="select">
-      <select name="todos" class="filter-todo">
-        <option value="all">All</option>
-        <option value="complete">Complete</option>
-        <option value="incomplete">Incomplete</option>
-        <option value="important">Important</option>
-      </select>
+  <!-- <h3 class="animate__animated animate__zoomIn">Hustle Harder!</h3> -->
+
+  <div class="todo-list">
+    <div class="todo-header">
+      <h2 class="list-title">
+        Hustle Harder!
+      </h2>
     </div>
 
-    <!-- <div>
+    <div class="todo-body">
+      <div class="tasks">
+        <div class="task"></div>
+      </div>
+
+      <div class="new-task-creator">
+        <form>
+          <input type="text" class="new task" name="task" placeholder="add a new hustle" />
+          <input type="submit" class="create" value="+" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="select">
+    <select name="todos" class="filter-todo">
+      <option value="all">All</option>
+      <option value="complete">Complete</option>
+      <option value="incomplete">Incomplete</option>
+      <option value="important">Important</option>
+    </select>
+  </div>
+
+  <!-- <div>
       <form>
         <input type="text" id="input" />
         <button id="button" type="submit">
@@ -75,15 +66,16 @@
       </div>
     </div> -->
 
-    <div>
-      <ul class="box-area">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-  </body>
+  <div>
+    <ul class="box-area">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
 </html>
